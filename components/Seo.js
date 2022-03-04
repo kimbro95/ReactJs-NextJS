@@ -5,24 +5,21 @@ export default function Seo({ title }) {
         <Head>
             <title>{title} | Next Movies</title>
             {/*
-        - Hear ( next / head )
-        ÆäÀÌÁö head¿¡ ¿¤¸®¸ÕÆ®¸¦ Ãß°¡ÇÏÁö À§ÇÑ ³»ÀåÄÄÆ÷³ÍÆ®
-        head¿¡ ÅÂ±×°¡ Áßº¹µÇÁö ¾Êµµ·Ï ÇÏ·Á¸é ÅÂ±×°¡ ·£´õ¸µµÇµµ·ÏÇÏ´Â key ¼Ó¼ºÀ» Áà¾ßÇÑ´Ù.
-        ex) <Head>
-                <title> My Page </title>
-                <meta property="og:title" content="My Page" key="title" />
-            </Head>
-            <Head>
-                <meta property="og:title" content="My New Page" key="title" />
-            </Head>
-        À§¿¡ °æ¿ì µÎ¹øÂ° property="og:title" ¸¸ ·£´õ¸µµÈ´Ù.
-        Áßº¹ Å° ¼Ó¼ºÀÌ ÀÖ´Â meta ÅÂ±×´Â ÀÚµ¿À¸·Î Ã³¸®µÈ´Ù.
-        key ¼Ó¼ºÀ» ÁöÁ¤ÇØÁÖÁö ¾ÊÀ¸¸é meta og:titleÀÌ Áßº¹ÇØ¼­ 2¹ø ·£´õ¸µµµ´Ï´Ù.
-        titleÀº ÁöÁ¤ÇÏÁö ¾Ê¾Æµµ 2¹ø ·£´õ¸µµÇÁö¾ÊÀ½
-            
-        */}
-
-
+            - Head ( next / head )
+            íŽ˜ì´ì§€ headì— ì—˜ë¦¬ë¨¼íŠ¸ë¥¼ ì¶”ê°€í•˜ì§€ ìœ„í•œ ë‚´ìž¥ì»´í¬ë„ŒíŠ¸
+            headì— íƒœê·¸ê°€ ì¤‘ë³µë˜ì§€ ì•Šë„ë¡ í•˜ë ¤ë©´ íƒœê·¸ê°€ ëžœë”ë§ë˜ë„ë¡í•˜ëŠ” key ì†ì„±ì„ ì¤˜ì•¼í•œë‹¤.
+            ex) <Head>
+                    <title> My Page </title>
+                    <meta property="og:title" content="My Page" key="title" />
+                </Head>
+                <Head>
+                    <meta property="og:title" content="My New Page" key="title" />
+                </Head>
+            ìœ„ì— ê²½ìš° ë‘ë²ˆì§¸ property="og:title" ë§Œ ëžœë”ë§ëœë‹¤.
+            ì¤‘ë³µ í‚¤ ì†ì„±ì´ ìžˆëŠ” meta íƒœê·¸ëŠ” ìžë™ìœ¼ë¡œ ì²˜ë¦¬ëœë‹¤.
+            key ì†ì„±ì„ ì§€ì •í•´ì£¼ì§€ ì•Šìœ¼ë©´ meta og:titleì´ ì¤‘ë³µí•´ì„œ 2ë²ˆ ëžœë”ë§ë„ë‹ˆë‹¤.
+            titleì€ ì§€ì •í•˜ì§€ ì•Šì•„ë„ 2ë²ˆ ëžœë”ë§ë˜ì§€ì•ŠìŒ
+            */}
         </Head>
     )
 }
