@@ -2,8 +2,11 @@ import { useRouter } from "next/router";
 
 export default function Detail() {
     const router = useRouter();
-    console.log(router);
-    return "detail";
+    return (
+        <div>
+            <h4>{router.query.id || "Loading..."}</h4>
+        </div>
+    )
     /*
         https://nextjs.org/docs/routing/dynamic-routes#catch-all-routes
         -Dynamic Routes

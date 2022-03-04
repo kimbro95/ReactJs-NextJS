@@ -1,14 +1,52 @@
-import { useEffect, useState } from "react";
+import Link from "next/link";
+import { useRouter } from "next/router";
 import Seo from "../components/Seo";
 
 export default function Home({ results }) {
+  const router = useRouter();
+  const onClick = (id) => {
+    router.push(
+      {
+        pathname: `/movies/${id}`
+      },
+      `/movies/${id}`
+    )
+  };
+  /*
+    -router.push
+    url - Url Object | string 탐색할 URL
+    as  - Url Object | string 브라우저 URL 표시줄에 표시될 경로에 대한 선택적 데코레이션 즉 masking
+    router.push(url, as, options)
+    ex) router.push({
+          pathname: `/movies/${id}`,
+          query: {
+          title,
+          id,
+        },
+        `/movies/${id}`
+        })
+  */
+
   return (
     <div className="container">
       <Seo title="Home" />
       {results?.map((movie) => (
-        <div className="movie" key={movie.id}>
+        <div
+          onClick={() => onClick(movie.id)}
+          className="movie"
+          key={movie.id}
+        >
           <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} />
-          <h4>{movie.original_title}</h4>
+          <h4>
+            <Link
+              href={{
+                pathname: `/movies/${movie.id}`,
+              }}
+              as={`/movies/${movie.id}`}
+            >
+              <a>{movie.original_title}</a>
+            </Link>
+          </h4>
         </div>
       ))}
       <style jsx>{`

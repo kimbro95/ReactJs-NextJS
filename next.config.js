@@ -37,6 +37,10 @@ const nextConfig = {
           이렇게 코드내에서 /api/movies/ 호출시 URL을 destination에 지정된 경로를 mask 하여 호출해준다.
         */
       },
+      {
+        source: "/api/movies/:id",
+        destination: `https://api.themoviedb.org/3/movie/:id?api_key=${API_KEY}&language=ko-KR`
+      },
     ];
   },
 }
