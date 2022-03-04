@@ -7,7 +7,7 @@ export default function Home({ results }) {
       <Seo title="Home" />
       {results?.map((movie) => (
         <div className="movie" key={movie.id}>
-          <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} />
+          <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} />
           <h4>{movie.original_title}</h4>
         </div>
       ))}
@@ -68,4 +68,14 @@ export async function getServerSideProps() {
       }
       받아온 data 값으로 페이지를 랜더링한다.
   ⭐SEO(Search Engine Optimization)가 필요한 페이지라면 getServerSideProps(SSR)을 적용하면 좋을 것 같다.⭐
+
+  💡 getServerSideProps (https://nextjs.org/docs/basic-features/data-fetching/get-server-side-props)
+  언제 SSR을 사용해야 하는지
+  request time에 반드시 데이터를 fetch해야하는 페이지를 pre-render하는 경우에 사용
+  데이터를 pre-render할 필요가 없다면 CSR(Client Side Rendering)를 사용하는 것이 좋을 수 있다.
+  CSR
+  1. 먼저 데이터가 없는 페이지를 직시 표시
+  2. 페이지의 일부는 Static Generation을 사용 pre-render할 수 있다.
+  3. 없는 데이터를 위해 loading 상태를 표시할 수 있다.
+  4. 그런 다음 클라이언트 측에서 데이터를 가져와 준비가되면 표시한다.
 */
