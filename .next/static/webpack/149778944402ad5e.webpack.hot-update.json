@@ -1,0 +1,1 @@
+{"c":["pages/404","webpack"],"r":["pages/movies/[...params]"],"m":["./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fmovies%2F%5B...params%5D&absolutePagePath=D%3A%5Cproject%5CReactJs-NextJS%5Cpages%5Cmovies%5C%5B...params%5D.js!","./pages/movies/[...params].js"]}
